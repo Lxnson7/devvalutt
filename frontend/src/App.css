@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #0a0a0a;
+  color: #e5e7eb;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+}
+
+/* Navbar Styles */
+.navbar {
+  background: #111827;
+  padding: 0;
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: #22d3ee;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #22d3ee;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-email {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-email::before {
+  content: '👤';
+}
+
+/* Main Content */
+.dashboard-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: #9ca3af;
+}
+
+/* Buttons */
+button {
+  background: #0a0a0a;
+  color: #22d3ee;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #06b6d4;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #374151;
+  color: #6b7280;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-delete {
+  background: transparent !important;
+  color: #ef4444 !important;
+  border: 1px solid #991b1b !important;
+}
+
+.btn-delete:hover {
+  background: #7f1d1d !important;
+  color: #fca5a5 !important;
+  border-color: #ef4444 !important;
+}
+
+.btn-secondary {
+  background: transparent !important;
+  color: #e5e7eb !important;
+  border: 1px solid #374151 !important;
+}
+
+.btn-secondary:hover {
+  background: #1f2937 !important;
+  border-color: #4b5563 !important;
+}
+
+/* Project Cards */
+.project-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #374151;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.folder-icon {
+  font-size: 32px;
+  color: #22d3ee;
+  transition: transform 0.2s ease;
+}
+
+.project-details h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f9fafb;
+  margin: 0 0 6px 0;
+}
+
+.project-details p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+/* API Keys Section */
+.api-keys-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #1f2937;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: '🔑';
+}
+
+/* Form Inputs */
+input, textarea, select {
+  background: #0a0a0a;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  color: #e5e7eb;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+}
+
+/* Modal/Dialog Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent !important;
+  color: #9ca3af !important;
+  border: none !important;
+  font-size: 24px;
+  padding: 4px 8px !important;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #f9fafb !important;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 8px;
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #1f2937;
+  margin: 24px 0;
+}
+
+/* Login Page */
+/* Login Page */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* was red or black — make transparent */
+  position: relative; /* keep stacking context above glitch */
+  z-index: 10;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+
+      /* ensure login content is above the glitch */
+}
+
+.login-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.login-card h2 {
+  text-align: center;
+  color: #f9fafb;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+/* Link Style */
+.link-button {
+  background: none !important;
+  border: none !important;
+  color: #22d3ee !important;
+  text-decoration: underline;
+  padding: 0 !important;
+  font-size: 13px !important;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: #06b6d4 !important;
+}

@@ -1,0 +1,12 @@
+html, body, #root {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* make sure nothing accidentally uses an opaque bg for the app root */
+#root {
+  position: relative;
+  z-index: 10; /* app content sits above the glitch (glitch will use z-index: 0) */
+}
