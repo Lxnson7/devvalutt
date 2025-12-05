@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { useAuth } from "./context/AuthContext"
 import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
-import GetStarted from './pages/getstarted'
+import GetStarted from './pages/GetStarted'
 
 
 // Protected Route Component
